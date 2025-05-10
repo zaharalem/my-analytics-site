@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5D9HCG2L');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سبد خرید</title>
@@ -8,12 +22,19 @@
 </head>
 <body style="direction: rtl; font-family: sans-serif; background: #f9f9f9; margin: 0; padding: 0;">
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9HCG2L"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <nav>
     <ul style="list-style: none; display: flex; gap: 20px; background: #333; padding: 10px;">
       <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
-      <li><a href="about.html" style="color: #fff; text-decoration: none;">a bout</a></li>
-      <li><a href="contact.html" style="color: #fff; text-decoration: none;">contact</a></li>
-      <li><a href="buy.html" style="color: #fff; text-decoration: none;">cart</a></li>
+      <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+      <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+      <li><a href="buy.html" style="color: #fff; text-decoration: none;">Cart</a></li>
     </ul>
   </nav>
 
@@ -22,7 +43,7 @@
     <p><strong>محصول:</strong> دوره آموزش HTML و CSS</p>
     <p><strong>قیمت:</strong> ۲۵۰٬۰۰۰ تومان</p>
 
-    <button onclick="alert('درگاه پرداخت فعال نیست.')" 
+    <button onclick="dataLayer.push({'event': 'view-cart'}); alert('درگاه پرداخت فعال نیست.')" 
       style="background-color: #28a745; color: white; padding: 12px 20px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; width: 100%; margin-top: 20px;">
       پرداخت
     </button>
