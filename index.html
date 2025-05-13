@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Analytics Site</title>
-  <link rel="stylesheet" href="style.css" />
-
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
       w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-
       var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),
-          dl = l !== 'dataLayer' ? '&l=' + l : '';
-
-      // اگر پارامتر gtm_debug توی آدرس هست، به gtm.js اضافه کن
-      var urlParams = new URLSearchParams(window.location.search);
-      var debug = urlParams.has('gtm_debug') ? '&gtm_debug=x' : '';
-
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + debug;
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5D9HCG2L');
   </script>
   <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Analytics Site</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9HCG2L"
@@ -46,9 +38,17 @@
   </nav>
 
   <h1>سلام! به سایت آنالیتیکس من خوش اومدی 🚀</h1>
-  <button onclick="alert('کلیک شد!')">روی من کلیک کن</button>
+  <button onclick="alert('کلیک شد!'); gtag('event', 'click', {'event_category': 'button', 'event_label': 'click_button'});">روی من کلیک کن</button>
 
   <img src="logo.png" alt="Site Logo" style="width: 200px; height: auto;" />
-
+  
+  <!-- Google Analytics 4 Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-11211T3CS0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-11211T3CS0', { 'debug_mode': true });
+  </script>
 </body>
 </html>
