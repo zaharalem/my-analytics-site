@@ -1,5 +1,6 @@
+You said:
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
   <!-- Google Tag Manager -->
   <script>
@@ -17,7 +18,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>سایت من</title>
+  <title>My Analytics Site</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -27,11 +29,27 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- محتوای سایت -->
-  <h1>سلام! به سایت من خوش آمدید 🚀</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="buy.html">Cart</a></li> 
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>سلام! به سایت آنالیتیکس من خوش اومدی 🚀</h1>
+  <button onclick="alert('کلیک شد!'); gtag('event', 'click', {'event_category': 'button', 'event_label': 'click_button'});">روی من کلیک کن</button>
+
+  <img src="logo.png" alt="Site Logo" style="width: 200px; height: auto;" />
   
-  <button onclick="dataLayer.push({'event': 'pay_click'}); alert('کلیک پرداخت ثبت شد');">
-    پرداخت
-  </button>
+  <!-- Google Analytics 4 Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-11211T3CS0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-11211T3CS0', { 'debug_mode': true });
+  </script>
 </body>
 </html>
