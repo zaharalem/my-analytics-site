@@ -1,29 +1,55 @@
+You said:
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5D9HCG2L');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>آنالیتیکس با gtag</title>
+  <title>My Analytics Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9HCG2L"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- فقط Google Analytics (بدون GTM) -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="buy.html">Cart</a></li> 
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>سلام! به سایت آنالیتیکس من خوش اومدی 🚀</h1>
+  <button onclick="alert('کلیک شد!'); gtag('event', 'click', {'event_category': 'button', 'event_label': 'click_button'});">روی من کلیک کن</button>
+
+  <img src="logo.png" alt="Site Logo" style="width: 200px; height: auto;" />
+  
+  <!-- Google Analytics 4 Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-11211T3CS0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-11211T3CS0', {
-      'debug_mode': true // فعال‌سازی DebugView
-    });
+    gtag('config', 'G-11211T3CS0', { 'debug_mode': true });
   </script>
-</head>
-<body>
-  <h1>سلام! آنالیتیکس فعال است</h1>
-  
-  <button onclick="gtag('event', 'purchase_click', {
-    event_category: 'button',
-    event_label: 'پرداخت کلیک شد'
-  }); alert('درگاه پرداخت فعال نیست.')">
-    پرداخت
-  </button>
 </body>
 </html>
