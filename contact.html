@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>تماس با ما</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    video {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>تماس با ما</h1>
+  <p>لطفاً ویدئوی زیر را مشاهده کنید:</p>
+
+  <video id="contactVideo" controls>
+    <source src="97b91ee1d6418beb02e16dfae4ac5d9f32088070-360p.mp4" type="video/mp4">
+    مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
+  </video>
+
+  <script>
+    const video = document.getElementById('contactVideo');
+
+    video.addEventListener('ended', function () {
+      // ارسال ایونت به dataLayer (برای GTM)
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'video_completed',
+        page: 'contact'
+      });
+      console.log("🎯 ویدئو به پایان رسید - ایونت ارسال شد");
+    });
+  </script>
+
+</body>
+</html>
